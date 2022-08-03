@@ -1,6 +1,5 @@
 <?php
-$mysqli = mysqli_connect("localhost","root","","WSR") or die("Ошибка: " . mysqli_error($con));
-
+require_once "config.php";
 if (!empty($_POST['login']) && !empty($_POST['pass'])) 
 {
     $sql = "SELECT * FROM user WHERE login= ?  LIMIT 1";

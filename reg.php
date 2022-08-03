@@ -1,8 +1,7 @@
 <?php
+require_once "config.php";
 
-$mysqli = mysqli_connect("localhost","root","","WSR") or die("Ошибка: " . mysqli_error($con));
-
-if (!empty($_POST['login']) && !empty($_POST['pass'])) 
+if (!empty($_POST['login']) && !empty($_POST['pass']) && !empty($_POST['name'])) 
 {
     $sql = "SELECT * FROM user WHERE login= ?  LIMIT 1";
     $stmt = $mysqli->prepare($sql);
@@ -11,7 +10,8 @@ if (!empty($_POST['login']) && !empty($_POST['pass']))
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
     
-    if($user!=null) {      
+    if($user!=null) {  
+            
         header("Location: err_reg.php");
         die();     
     }
