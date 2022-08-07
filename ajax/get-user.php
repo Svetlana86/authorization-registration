@@ -7,3 +7,5 @@
     $user = $result->fetch_all(MYSQLI_ASSOC);
     echo json_encode($user);
 
+    die();
+

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="script/script.js"></script>
+	<!--<script src="script/script.js"></script>-->
 	<title>Вход/Регистрация</title>
 </head>
 <body>
@@ -122,20 +122,7 @@
         </div>
       </div>
     </header>
-	<div class="container mt-4">
-		<div class="row">			
-			<div class="col ">
-				<h1>Здесь какой-то контент</h1>
-
-				<?php if($_COOKIE['user']=="admin" ){?>
-					<button id="submit" onclick="getAllUser();">Вывести всех пользователей</button>
-					
-				<?php }?>
-				 
-			</div>
-
-		</div>
-	</div>
+	<?php require_once "content.php";?>
 	
 </body>
 </html>
